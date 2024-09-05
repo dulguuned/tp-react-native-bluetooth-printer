@@ -1,8 +1,8 @@
 {
   "author": {
-    "name": "Tulpar Yazılım",
-    "email": "info@tulparyazilim.com.tr",
-    "url": "https://www.tulparyazilim.com.tr"
+    "name": "Enkhdulguun",
+    "email": "dulguuned41@gmail.com",
+    "url": "https://rewardly.sg"
   },
   "bundleDependencies": false,
   "deprecated": false,
@@ -22,17 +22,17 @@
     "POS",
     "Bluetooth",
     "Printer",
-    "Tulpar Yazılım"
+    "Enkhdulguun"
   ],
   "license": "MIT",
   "main": "index",
   "types": "./types/index.d.ts",
   "typings": "./types/index.d.ts",
-  "name": "tp-react-native-bluetooth-printer",
-  "homepage": "https://github.com/tulparyazilim/tp-react-native-bluetooth-printer#readme",
+  "name": "ble-react-native-bluetooth-printer",
+  "homepage": "https://github.com/dulguuned/tp-react-native-bluetooth-printer#readme",
   "repository": {
     "type": "git",
-    "url": "https://github.com/tulparyazilim/tp-react-native-bluetooth-printer"
+    "url": "https://github.com/dulguuned/tp-react-native-bluetooth-printer"
   },
   "peerDependencies": {
     "react-native": ">=0.55.4"

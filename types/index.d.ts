@@ -227,6 +227,9 @@ declare module "tp-react-native-bluetooth-printer" {
       text: string,
       options?: PrintTextOptions
     ): void | string | PromiseLike<void> | PromiseLike<string>;
+    static printRawData(
+      data: string
+    ): void
     static printColumn(
       columnWidths: number[],
       columnAligns: number[] | (typeof ALIGN)[],
