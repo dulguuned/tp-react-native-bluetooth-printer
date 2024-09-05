@@ -450,6 +450,36 @@ public class RNBluetoothEscposPrinterModule extends ReactContextBaseJavaModule
         return true;
     }
 
+    @ReactMethod
+    public void printRawData(String rawDataString) {         
+        if (data==null || mService.getState() != BluetoothService.STATE_CONNECTED) {
+            return false;
+        }
+        mService.write(hexStringToByteArray(rawDataString));
+    }
+
+    private byte[] hexStringToByteArray(String hexString)
+        throws IllegalArgumentException {
+        // Remove any spaces and make sure the string has an even number of characters
+        hexString = hexString.replaceAll("\\s", "");
+        if (hexString.length() % 2 != 0) {
+        throw new IllegalArgumentException(
+            "Hex string must have an even number of characters"
+        );
+        }
+
+        // Allocate a byte array to hold the converted hex string
+        byte[] bytes = new byte[hexString.length() / 2];
+
+        // Convert the hex string to bytes
+        for (int i = 0; i < hexString.length(); i += 2) {
+        int byteValue = Integer.parseInt(hexString.substring(i, i + 2), 16);
+        bytes[i / 2] = (byte) byteValue;
+        }
+
+        return bytes;
+    }
+
     // 根据Unicode编码完美的判断中文汉字和符号
     private static boolean isChinese(char c) {
         Character.UnicodeBlock ub = Character.UnicodeBlock.of(c);
