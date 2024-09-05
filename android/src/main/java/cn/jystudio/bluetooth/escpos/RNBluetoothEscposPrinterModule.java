@@ -452,7 +452,7 @@ public class RNBluetoothEscposPrinterModule extends ReactContextBaseJavaModule
 
     @ReactMethod
     public void printRawData(String rawDataString) {         
-        if (data==null || mService.getState() != BluetoothService.STATE_CONNECTED) {
+        if (rawDataString==null || mService.getState() != BluetoothService.STATE_CONNECTED) {
             return false;
         }
         mService.write(hexStringToByteArray(rawDataString));
