@@ -1,4 +1,4 @@
-declare module "tp-react-native-bluetooth-printer" {
+declare module "ble-react-native-bluetooth-printer" {
   export enum DIRECTION {
     FORWARD = 0,
     BACKWARD = 1,
